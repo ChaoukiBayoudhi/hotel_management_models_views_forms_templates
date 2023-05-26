@@ -1,0 +1,9 @@
+{% comment  %}
+enctype = "multipart/form-data" is used to upload files
+here is the room's image
+{% endcomment %}
+<form method="post",enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form1.as_p }}
+        <input type="submit" name="save" value="save">
+</form>

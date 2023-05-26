@@ -1,0 +1,8 @@
+<from method="post">
+    {% csrf_token %}
+    {{ form1.as_p }}
+    <button type="submit">save</button>
+    {%if error_msg %}
+    {{ error_msg }}
+    {% endif %}
+</from>

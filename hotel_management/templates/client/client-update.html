@@ -1,0 +1,52 @@
+<h2>Update Client</h2>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form1.as_p }}
+  <button type="submit">Update</button>
+</form>
+
+{% comment %}
+<!-- #region or -->
+<h2>Update Client</h2>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.non_field_errors }}
+  <div class="form-group">
+    <label for="{{ form.client_name.id_for_label }}">Client Name:</label>
+    {{ form.client_name }}
+    {{ form.client_name.errors }}
+  </div>
+  <div class="form-group">
+    <label for="{{ form.client_email.id_for_label }}">Client Email:</label>
+    {{ form.client_email }}
+    {{ form.client_email.errors }}
+  </div>
+  <div class="form-group">
+    <label for="{{ form.client_phone.id_for_label }}">Client Phone:</label>
+    {{ form.client_phone }}
+    {{ form.client_phone.errors }}
+  </div>
+  <div class="form-group">
+    <label for="{{ form.client_address.id_for_label }}">Client Address:</label>
+    {{ form.client_address }}
+    {{ form.client_address.errors }}
+  </div>
+  <div class="form-group">
+    <label for="{{ form.client_country.id_for_label }}">Client Country:</label>
+    {{ form.client_country }}
+    {{ form.client_country.errors }}
+  </div>
+  <div class="form-group">
+    <label for="{{ form.client_city.id_for_label }}">Client City:</label>
+    {{ form.client_city }}
+    {{ form.client_city.errors }}
+  </div>
+  <div class="form-group">
+    <label for="{{ form.client_zip.id_for_label }}">Client ZIP:</label>
+    {{ form.client_zip }}
+    {{ form.client_zip.errors }}
+  </div>
+  <button type="submit">Update</button>
+</form>
+
+{% endcomment %}
